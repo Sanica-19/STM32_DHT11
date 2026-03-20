@@ -1,6 +1,6 @@
-# 🌡️ STM32-Based Temperature & Humidity Monitor (DHT11 + I2C LCD)
+#  STM32-Based Temperature & Humidity Monitor (DHT11 + I2C LCD)
 
-## 🚀 Project Overview
+##  Project Overview
 
 This project builds a compact environmental monitoring system using an **STM32F4 microcontroller**, where temperature and humidity values are captured using a **DHT11 sensor** and displayed on a **16x2 LCD via I2C communication**.
 
@@ -8,7 +8,7 @@ Instead of relying on libraries for everything, this implementation focuses on *
 
 ---
 
-## 🎯 What Makes This Project Interesting?
+##  What Makes This Project Interesting?
 
 * Uses **precise microsecond timing** to communicate with DHT11
 * Demonstrates **single-wire protocol decoding**
@@ -18,7 +18,7 @@ Instead of relying on libraries for everything, this implementation focuses on *
 
 ---
 
-## 🧩 Hardware Used
+##  Hardware Used
 
 * STM32F401 Microcontroller
 * DHT11 Temperature & Humidity Sensor
@@ -27,15 +27,15 @@ Instead of relying on libraries for everything, this implementation focuses on *
 
 ---
 
-## 🔌 Pin Configuration
+##  Pin Configuration
 
-### 📍 Sensor (DHT11)
+###  Sensor (DHT11)
 
 * DATA → PA1
 * VCC → 3.3V
 * GND → GND
 
-### 📍 LCD (I2C)
+###  LCD (I2C)
 
 * SDA → PB9
 * SCL → PB8
@@ -48,7 +48,7 @@ Instead of relying on libraries for everything, this implementation focuses on *
 
 The DHT11 doesn’t use standard protocols like I2C or SPI. Instead, it communicates using **timing-based digital signals**.
 
-### 🧠 How data is captured:
+###  How data is captured:
 
 1. STM32 sends a **start pulse** to wake the sensor
 2. DHT11 acknowledges with a response signal
@@ -58,7 +58,7 @@ The DHT11 doesn’t use standard protocols like I2C or SPI. Instead, it communic
 
 ---
 
-## ⏱️ Timing is Everything
+##  Timing is Everything
 
 A hardware timer (TIM2) is used to generate **microsecond-level delays**, which is critical because:
 
@@ -67,7 +67,7 @@ A hardware timer (TIM2) is used to generate **microsecond-level delays**, which 
 
 ---
 
-## 📟 Display Logic
+##  Display Logic
 
 Once data is decoded:
 
@@ -84,7 +84,7 @@ Hum: 60%
 
 ---
 
-## 🔄 Execution Flow
+##  Execution Flow
 
 * Initialize peripherals (GPIO, I2C, Timer)
 * Trigger DHT11 communication
@@ -94,7 +94,7 @@ Hum: 60%
 
 ---
 
-## 💡 Key Learning Takeaways
+##  Key Learning Takeaways
 
 This project helped in understanding:
 
@@ -106,7 +106,7 @@ This project helped in understanding:
 
 ---
 
-## 🚀 Possible Enhancements
+##  Possible Enhancements
 
 * Upgrade to **DHT22** for better accuracy
 * Add **UART logging** for debugging
